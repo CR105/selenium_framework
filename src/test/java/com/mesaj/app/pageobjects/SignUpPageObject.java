@@ -14,7 +14,7 @@ public class SignUpPageObject {
 
     private By firstNameTextbox = By.xpath("//input[@ng-model='FirstName']");
 
-    private By lastName = By.xpath("//input[@ng-model='Lastname']");
+    private By lastName = By.xpath("//input[@ng-model='LastName']");
 
     private By emailAdress = By.xpath("//input[@type='email']");
 
@@ -37,6 +37,10 @@ public class SignUpPageObject {
     private By confirmPassword = By.id("secondpassword");
 
     private By submit = By.id("submitbtn");
+
+    public void go(String url) {
+        this.driver.get(url);
+    }
 
     public void writeFirstName(String firstName){
         this.driver.findElement(this.firstNameTextbox).sendKeys(firstName);
