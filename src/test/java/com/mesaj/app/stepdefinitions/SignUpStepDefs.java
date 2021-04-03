@@ -1,5 +1,6 @@
 package com.mesaj.app.stepdefinitions;
 
+import com.mesaj.app.HookDriver;
 import com.mesaj.app.pageobjects.SignUpPageObject;
 import com.mesaj.app.pageobjects.SignUpServices;
 import com.mesaj.app.util.RandomNumberGenerator;
@@ -12,11 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SignUpStepDefs {
     @Given("^Pepito wants to have an account$")
     public void pepito_wants_to_have_an_account() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/drivers/mac/chromedriver");
-
-        WebDriver driver = new ChromeDriver();
-
-        SignUpServices signUp = new SignUpServices(driver);
+        SignUpServices signUp = new SignUpServices(HookDriver.driver);
 
         signUp.go("http://demo.automationtesting.in/Register.html");
         signUp.writeFirstName("Pepito");
@@ -34,8 +31,6 @@ public class SignUpStepDefs {
         signUp.clickOnSubmit();
 
         Thread.sleep(8000);
-        driver.quit();
-
     }
 
     @When("^he sends required information to get the account$")
