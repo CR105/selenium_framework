@@ -1,6 +1,5 @@
 package com.mesaj.app.tasks;
 
-import com.mesaj.app.enums.Gender;
 import com.mesaj.app.models.User;
 import com.mesaj.app.pageobjects.SignUpServices;
 import com.mesaj.app.util.RandomNumberGenerator;
