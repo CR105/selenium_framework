@@ -1,19 +1,19 @@
 package com.mesaj.app.pageobjects;
 
 import lombok.Getter;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 @Getter
 public class SignUpPageObject {
 
-    public SignUpPageObject(WebDriver driver){
-        PageFactory.initElements(driver, this);
-    }
+    @Autowired
+    public SignUpPageObject(WebDriver driver){ PageFactory.initElements(driver, this); }
 
     @FindBy(xpath = "//input[@ng-model='FirstName']")
     private WebElement firstNameTextbox;
