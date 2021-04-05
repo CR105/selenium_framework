@@ -68,10 +68,9 @@
             <version>4.0.39</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>4.3.26.RELEASE</version>
-            <scope>compile</scope>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
         </dependency>
     </dependencies>
 
